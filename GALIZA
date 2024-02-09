@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página con imagen de fondo y popup</title>
+<style>
+  body {
+    background-image: url('https://aconadecolon.es/GALIZA.png');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+  }
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  .popup-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<button onclick="openPopup()">Abrir Popup</button>
+
+<div id="popup" class="popup">
+  <span class="popup-close" onclick="closePopup()">X</span>
+  <h2>Texto del Popup</h2>
+  <p>GALIZA</p>
+</div>
+
+<script>
+  function openPopup() {
+    document.getElementById('popup').style.display = 'block';
+  }
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
