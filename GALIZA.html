@@ -13,6 +13,8 @@
     font-family: Arial, sans-serif;
     margin: 0; /* Para evitar márgenes predeterminados */
     padding: 0; /* Para evitar relleno predeterminado */
+    width: 100%; /* Ajustamos el ancho al 100% */
+    height: 100%; /* Ajustamos la altura al 100% */
   }
   .popup {
     display: none;
@@ -45,6 +47,16 @@
 </div>
 
 <script>
+  window.onload = function() {
+    var body = document.querySelector('body');
+    var img = new Image();
+    img.onload = function() {
+      body.style.width = this.width + 'px';
+      body.style.height = this.height + 'px';
+    };
+    img.src = 'https://aconadecolon.es/GALIZA.png';
+  };
+
   function openPopup() {
     document.getElementById('popup').style.display = 'block';
   }
