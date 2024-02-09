@@ -7,14 +7,11 @@
 <style>
   body {
     background-image: url('https://aconadecolon.es/GALIZA.png');
-    background-size: contain;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
-    margin: 0; /* Para evitar márgenes predeterminados */
-    padding: 0; /* Para evitar relleno predeterminado */
-    width: 100%; /* Ajustamos el ancho al 100% */
-    height: 100%; /* Ajustamos la altura al 100% */
+    width: 1131px;
+    height: 1600px;
   }
   .popup {
     display: none;
@@ -43,20 +40,10 @@
 <div id="popup" class="popup">
   <span class="popup-close" onclick="closePopup()">X</span>
   <h2>Texto del Popup</h2>
-  <p>Aquí puedes poner el texto que desees para tu popup.</p>
+  <p>GALIZA</p>
 </div>
 
 <script>
-  window.onload = function() {
-    var body = document.querySelector('body');
-    var img = new Image();
-    img.onload = function() {
-      body.style.width = this.width + 'px';
-      body.style.height = this.height + 'px';
-    };
-    img.src = 'https://aconadecolon.es/GALIZA.png';
-  };
-
   function openPopup() {
     document.getElementById('popup').style.display = 'block';
   }
