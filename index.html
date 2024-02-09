@@ -20,17 +20,26 @@
     align-items: center;
   }
    #boton {
-    padding: 10px 20px;
-    background-color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 0; /* Elimina cualquier relleno */
+    background: none; /* Hace que el fondo sea transparente */
+    border: none; /* Elimina el borde */
     cursor: pointer;
+    position: fixed;
+    top: 45%; /* Ajusta el porcentaje de la posición vertical */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #boton::after {
+    content: ''; /* Elimina cualquier contenido */
+    display: block; /* Hace que el elemento sea un bloque */
+    width: 40px; /* Ajusta el ancho del botón */
+    height: 40px; /* Ajusta la altura del botón */
+    background-color: transparent; /* Hace el botón invisible */
   }
   .popup {
     display: none;
     position: fixed;
-    top: 46%;
+    top: 46%; /* Ajusta el porcentaje de la posición vertical */
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
@@ -49,7 +58,7 @@
 </head>
 <body>
 
-<button onclick="openPopup()">Abrir Popup</button>
+<button id="boton" onclick="openPopup()"></button>
 
 <div id="popup" class="popup">
   <span class="popup-close" onclick="closePopup()">X</span>
