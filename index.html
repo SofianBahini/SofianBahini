@@ -7,9 +7,26 @@
 <style>
   body {
     background-image: url('https://i.imgur.com/JYGJoKf.jpeg');
-    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Para evitar márgenes predeterminados */
+    padding: 0; /* Para evitar relleno predeterminado */
+    width: 100vw; /* Ancho completo de la ventana del navegador */
+    height: 100vh; /* Altura completa de la ventana del navegador */
+  }
+  #boton {
+    position: absolute;
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
   }
   .popup {
     display: none;
